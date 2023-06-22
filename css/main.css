@@ -1,0 +1,122 @@
+/* main styling */
+
+.container{
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+}
+
+
+.h2-accent{
+    color: var(--main-blue-color);
+}
+
+.key-products-sig{
+    font-style: normal ;
+    font-weight: 500 ;
+    font-size: calc(30px + 4 * var(--font-index));
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    margin-bottom: calc(4*var(--index));
+}
+
+.keys-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;  
+}
+
+.key-text-header {
+    font-weight: 600;
+    font-size: calc(17px + 2 * var(--font-index));
+    line-height: 140%;
+    color: var(--secondary-text-color);
+    margin-bottom: 12px;
+}
+
+.key-text p{
+    font-size: calc(12px + 2 * var(--font-index));
+}
+
+.key{
+    max-width: 100%;
+    background-color: var(--secondary-light-blue-color);
+    border-radius: 30px;
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 37px 20px 0 20px;
+}
+
+.key-img{  
+    width: auto;
+    max-height: 291px;
+    filter: drop-shadow(8px -8px 16px rgba(0, 0, 0, 0.06));
+    border-radius: 20px 20px 0px 0px;
+    justify-self: end;
+    
+}
+@media screen and (min-width: 1025px) {
+
+    .key-products-sig{
+        padding: 0 10vw !important;
+    }
+
+    .key-text-header{
+        font-size: 17px !important;
+    }
+
+    .key-text p{
+        font-size: 12px !important;
+    }
+
+    .keys-container{
+        gap: 20px;
+    }
+
+    .container{
+        margin: 0 20px;
+    }
+    
+}
+/* phones */
+
+@media screen and (max-width: 885px) {
+    .keys-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .key-products-sig{
+        margin-top: 20px;
+        font-size: 24px !important;
+    }
+    
+    .key-img{
+        max-height: 250px;
+        justify-self: center;
+    }
+
+    .broker-block{
+        margin-top: 1vh;
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .key-img{
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .key-img{
+        max-height: 150px;
+    }
+}
+ 
+
