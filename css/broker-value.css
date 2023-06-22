@@ -1,0 +1,95 @@
+.broker-value{
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+}
+
+.broker-main .broker-sig{
+    font-weight: 500;
+    font-size: calc(30px + 4 * var(--font-index));
+    text-align: left;
+    margin-bottom: 3vh;
+}
+
+.broker-block-sig{
+    font-weight: 500;
+    font-size: calc(14px + 1 * var(--font-index));
+    line-height: 20px;
+}
+
+.broker-aside{
+    width: 100%;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr );
+    gap: 3vw;
+}
+
+.broker-block{
+    padding: 8px;
+}
+
+.broker-block:hover {
+    background: var(--main-white-color);
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    
+}
+
+.broker-block-p{
+    font-weight: 500;
+    font-size: calc(12px + 1.5 * var(--font-index));
+    margin-top: calc(2*var(--index));
+}
+
+.broker-block .icon{
+    font-size: calc(30px + 1.5 * var(--font-index));
+    padding: 1px;
+}
+
+@media screen and (min-width: 1025px) {
+    .broker-aside{
+        gap: 1vw;
+    }
+
+    .broker-sig{
+        font-size: 30px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .broker-value{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    
+    .broker-main{
+        grid-row: 1;
+    }
+
+    .broker-main .broker-sig{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .broker-aside{
+        grid-row: 2;
+    }
+
+    .broker-main .button-primary{
+        font-size: 18px;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .broker-block{
+        margin-top: 5vh;
+        padding: 10px;
+        background: var(--main-white-color);
+        box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+}

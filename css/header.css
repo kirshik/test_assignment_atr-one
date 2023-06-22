@@ -1,0 +1,233 @@
+/* header styling */
+.component-header{
+    background-color: var(--secondary-blue-color);
+    color: var(--main-text-color);
+    display: grid; 
+    grid-template-areas: "text logo logo" "pluses pluses pluses";
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-main{
+    grid-area: text;
+    text-align: left;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+}
+
+.logo-sign{
+    font-weight: 400;
+    font-size: calc(14px + 2 * var(--font-index));
+    max-width: 25vw;
+}
+
+.header-aside{
+    grid-area: "logo";
+    justify-self: end;
+    align-self: center;
+}
+.header-aside .header-img{
+    width: 100%;
+}
+
+.button-primary{
+    background-color: var(--main-blue-color);
+    color: var(--main-white-color);
+    border: none;
+    font-size: calc(14px + 2 * var(--font-index));
+    border-radius: 8px;
+    padding: calc(1.5*var(--index)) calc(2 * var(--index));
+    cursor: pointer;
+    margin-top: 3vh;
+}
+
+
+.logo-link{
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(60px + 4 * var(--font-index));
+    line-height: 130%;
+    text-decoration: none;
+    color: var(--main-text-color);
+    display: flex;
+    margin-bottom: 1vh;
+}
+
+.logo-accent{
+    color: var(--main-blue-color);
+    background-color: var(--main-white-color);
+    padding: 0 1vw;
+    border-radius: 20px;
+    margin-left: 5px;
+    }
+
+.header-control-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-left: 20vw;
+}
+.button-language {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+.header-control-block .active{
+    background-color: var(--main-white-color);
+    color: var(--main-blue-color);
+    border: none;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.pluses{
+    grid-area: pluses;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1vw;
+    justify-items: center;
+    transform: translateY(-68%);
+    margin: 0 5%;
+}
+
+.pluses .plus{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding:  calc(2*var(--index)) ;
+    padding-bottom: calc(2.5*var(--index));
+    display: flex;
+    flex-direction: row;
+}
+.plus p{
+    font-weight: 500;
+    font-size: calc(13.4px + 2 * var(--font-index));
+    line-height: 20px;
+}
+
+.icon{
+    font-size: calc(15px + 3 * var(--font-index) );
+    background-color: var(--light-blue-color);
+    padding: 5px;
+    justify-self: end;
+    align-self: start;
+    color: var(--main-blue-color);
+    border-radius: 50%;
+    height: fit-content;
+}
+
+@media screen and (min-width: 1024px){
+    .pluses .plus p{
+        font-size: 14px;
+    }
+
+    .plus{
+        padding: 15px !important;
+    }
+
+    .icon{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 870px) {
+    .pluses .plus{
+        padding: 10px;
+    }
+    .plus p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .component-header{
+        grid-template-areas:  "logo" "text" "pluses";
+    }
+
+    .container-header{
+        background-color: var(--secondary-blue-color);
+    }
+
+    .header-control-block{
+        justify-content: end;
+        margin-left: 0;
+        margin-right: 5vw;
+        gap: 3vw;
+    }
+
+    .header-aside{
+        overflow: hidden;
+    }
+    .header-img{
+        width: 150% !important;
+        margin-left: -4%;
+        
+    }
+
+    .header-main{
+        margin-left: 10%;
+        margin-bottom: 0;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .logo-sign{
+        max-width: fit-content;
+        margin-right: 10vw;
+    }
+
+    .header-main .button-primary{
+        margin-bottom: 3vh;
+        width: 90%;
+        min-height: 8vh;
+    }
+
+    .pluses{
+        padding:  1vh 0;
+        grid-template-columns: repeat(2, 1fr);
+        transform: none;
+        gap: 4vw;
+    }
+
+    .pluses .plus{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+    }
+
+    .plus p{
+        font-size: calc(13px + 2 * var(--font-index));
+        padding: var(--index) ;
+        max-width: 84%;
+        align-self: baseline;
+    }
+
+    .icon{
+        transform: translateY(-45%);
+        font-size: 18px;
+        padding-bottom: 1vh;
+    }
+    
+}
+
+@media screen and (min-width: 424px) and (max-width: 767px) {
+    .plus{
+        width: 100%;
+    }
+    .plus p{
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .plus p{
+        max-width: 97%;
+    }
+}
+
