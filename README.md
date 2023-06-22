@@ -4,7 +4,7 @@ You can also visit this projects [GitHub Pages](https://kirshik.github.io/test_a
 
 clone this git repo
 ```
-  $ git clone https://github.com/kirshik/3d-maze.git
+  $ git clone https://github.com/kirshik/test_assignment_atr-one.git
 
 ```
 
