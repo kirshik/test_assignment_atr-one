@@ -1,4 +1,4 @@
-You can also visit this projects [GitHub Pages](https://kirshik.github.io/test_assignment_atr-one/).:sunglasses:
+You can also visit this projects [GitHub Pages](https://kirshik.github.io/test_assignment_atr-one/).
 
 ## Setup
 
@@ -10,6 +10,7 @@ clone this git repo
 
 open index.html file
 
+Enjoy:sunglasses:
 
 
 
